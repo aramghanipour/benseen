@@ -1,20 +1,53 @@
 ﻿<h1>Authors</h1>
 <p *ngIf="!authors"><em><span class="glyphicon glyphicon-refresh glyphicon-spin"></span></em></p>
-<table class='table table-striped' *ngIf="authors">
-    <thead>
-        <tr>
-            <th>Author ID</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Country</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let author of authors">
-            <td>{{ author.authorID }}</td>
-            <td>{{ author.firstname }}</td>
-            <td>{{ author.lastname }}</td>
-            <td>{{ author.country }}</td>
-        </tr>
-    </tbody>
-</table>
+
+<div class="col-md-8">
+    <table class='table table-striped table-responsive table-bordered table-hover' *ngIf="authors">
+        <thead>
+            <tr>
+                <th>Author ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let author of authors">
+                <td>{{ author.authorID }}</td>
+                <td>{{ author.firstname }}</td>
+                <td>{{ author.lastname }}</td>
+                <td>{{ author.country }}</td>
+            </tr>
+        </tbody>
+    </table>    
+</div>
+
+<div class="col-md-4">
+    <table class='table table-striped table-responsive table-bordered table-hover' *ngIf="authors">
+        <thead>
+            <tr>
+                <th>Author ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let author of authors">
+                <td>{{ author.authorID }}</td>
+                <td>{{ author.firstname }}</td>
+                <td>{{ author.lastname }}</td>
+                <td>{{ author.country }}</td>
+            </tr>
+        </tbody>
+    </table>  
+</div>
+
+
+<!--<ul>
+    <li *ngFor="let author of authors | paginate: { itemsPerPage: 10, currentPage: p }">
+        {{ author.authorID }}{{author.firstname}}{{ author.lastname }}{{ author.country }}
+    </li>
+</ul>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
