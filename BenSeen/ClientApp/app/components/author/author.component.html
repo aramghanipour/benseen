@@ -1,0 +1,20 @@
+﻿<h1>Authors</h1>
+<p *ngIf="!authors"><em><span class="glyphicon glyphicon-refresh glyphicon-spin"></span></em></p>
+<table class='table table-striped' *ngIf="authors">
+    <thead>
+        <tr>
+            <th>Author ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let author of authors">
+            <td>{{ author.authorID }}</td>
+            <td>{{ author.firstname }}</td>
+            <td>{{ author.lastname }}</td>
+            <td>{{ author.country }}</td>
+        </tr>
+    </tbody>
+</table>

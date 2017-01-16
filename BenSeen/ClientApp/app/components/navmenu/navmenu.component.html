@@ -1,5 +1,5 @@
 <div class='main-nav'>
-    <div class='navbar navbar-default'>
+    <div class='navbar'>
         <div class='navbar-header'>
             <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
                 <span class='sr-only'>Toggle navigation</span>
@@ -25,6 +25,11 @@
                 <li [routerLinkActive]="['link-active']">
                     <a [routerLink]="['/fetch-data']">
                         <span class='glyphicon glyphicon-th-list'></span> Fetch data
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/author']">
+                        <span class='glyphicon glyphicon-th-list'></span> Get Authors
                     </a>
                 </li>
             </ul>
